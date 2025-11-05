@@ -3,17 +3,20 @@ import { PuzzleImage, PuzzleDifficulty } from '../types';
 import { PUZZLE_CONFIGS } from '../utils/puzzleUtils';
 import './ImageSelectionView.css';
 
+// ベースパスを取得（GitHub Pages用）
+const BASE_URL = import.meta.env.BASE_URL;
+
 // 今日の画像: public/images/today/ に today1.jpg, today2.jpg, today3.jpg を配置してください
 const TODAY_IMAGES: PuzzleImage[] = [
-  { id: 'today-1', url: '/images/today/today1.jpg', name: '今日の画像1', isTodayImage: true },
-  { id: 'today-2', url: '/images/today/today2.jpg', name: '今日の画像2', isTodayImage: true },
-  { id: 'today-3', url: '/images/today/today3.jpg', name: '今日の画像3', isTodayImage: true },
+  { id: 'today-1', url: `${BASE_URL}images/today/today1.jpg`, name: '今日の画像1', isTodayImage: true },
+  { id: 'today-2', url: `${BASE_URL}images/today/today2.jpg`, name: '今日の画像2', isTodayImage: true },
+  { id: 'today-3', url: `${BASE_URL}images/today/today3.jpg`, name: '今日の画像3', isTodayImage: true },
 ];
 
 const PUZZLE_IMAGES: PuzzleImage[] = [
-  { id: '1', url: '/images/puzzle1.jpg', name: '画像1' },
-  { id: '2', url: '/images/puzzle2.jpg', name: '画像2' },
-  { id: '3', url: '/images/puzzle3.jpg', name: '画像3' },
+  { id: '1', url: `${BASE_URL}images/puzzle1.jpg`, name: '画像1' },
+  { id: '2', url: `${BASE_URL}images/puzzle2.jpg`, name: '画像2' },
+  { id: '3', url: `${BASE_URL}images/puzzle3.jpg`, name: '画像3' },
 ];
 
 interface ImageSelectionViewProps {
