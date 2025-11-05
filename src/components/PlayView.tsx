@@ -274,10 +274,8 @@ function PlayView({ image, difficulty, pieces, setPieces, onBack }: PlayViewProp
               const pieceHeight = PLAY_ZONE_SIZE / config.rows;
               const tabDepth = Math.min(pieceWidth, pieceHeight) * 0.2;
               const expandedWidth = pieceWidth + tabDepth * 2;
-              const expandedHeight = pieceHeight + tabDepth * 2;
               const scale = 0.6;
               const scaledWidth = expandedWidth * scale;
-              const scaledHeight = expandedHeight * scale;
 
               return (
                 <div
