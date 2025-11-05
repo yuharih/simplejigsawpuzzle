@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 背景 -->
+  <rect width="64" height="64" fill="#4a90e2" rx="4"/>
+  
+  <!-- ジグソーパズルピースの形状 -->
+  <path d="M 20 20 
+           L 44 20 
+           C 48 20, 48 24, 44 24
+           L 40 24
+           C 40 28, 36 28, 36 24
+           L 28 24
+           C 28 28, 24 28, 24 24
+           L 20 24
+           C 16 24, 16 20, 20 20 Z"
+        fill="#ffffff" 
+        stroke="#2c5aa0" 
+        stroke-width="2"/>
+  
+  <!-- 装飾的なピースの特徴 -->
+  <circle cx="30" cy="22" r="2" fill="#2c5aa0"/>
+  <circle cx="34" cy="22" r="2" fill="#2c5aa0"/>
+</svg>
+
