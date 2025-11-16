@@ -245,6 +245,7 @@
   transition: all 0.2s ease;
   user-select: none;
   box-sizing: border-box;
+  touch-action: none; /* モバイルでのピースドラッグを優先 */
 }
 
 .puzzle-piece.correct {

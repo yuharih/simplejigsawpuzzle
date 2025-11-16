@@ -180,9 +180,11 @@ function PlayView({ image, difficulty, pieces, setPieces, onBack }: PlayViewProp
       
       window.addEventListener('pointermove', handleMove, { passive: false });
       window.addEventListener('pointerup', handleUp, { passive: true });
+      window.addEventListener('pointercancel', handleUp, { passive: true });
       return () => {
         window.removeEventListener('pointermove', handleMove);
         window.removeEventListener('pointerup', handleUp);
+        window.removeEventListener('pointercancel', handleUp);
       };
     }
   }, [draggingPiece, pieces, handlePointerMove, handlePointerUp]);
@@ -261,6 +263,7 @@ function PlayView({ image, difficulty, pieces, setPieces, onBack }: PlayViewProp
                   zIndex: 2,
                 }}
                 onPointerDown={(e) => handlePiecePointerDown(piece, e)}
+                onPointerCancel={() => draggingPiece && handlePointerUp(draggingPiece)}
               />
             );
           })}
@@ -288,7 +291,8 @@ function PlayView({ image, difficulty, pieces, setPieces, onBack }: PlayViewProp
                     left: `${index * (scaledWidth + 10)}px`,
                     top: '20px',
                   }}
-                  onPointerDown={(e) => handlePiecePointerDown(piece, e)}
+                onPointerDown={(e) => handlePiecePointerDown(piece, e)}
+                onPointerCancel={() => draggingPiece && handlePointerUp(draggingPiece)}
                 />
               );
             })}
