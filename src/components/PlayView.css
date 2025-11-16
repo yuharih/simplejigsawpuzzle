@@ -187,6 +187,7 @@
   border: 3px solid rgba(255, 255, 255, 0.5);
   overflow: hidden;
   touch-action: none; /* タッチスクロールを抑止しドラッグを優先 */
+  aspect-ratio: 1 / 1; /* 常に正方形を維持して画像サイズにフィット */
 }
 
 .puzzle-guide {

@@ -140,7 +140,7 @@ function ImageSelectionView({ onImageSelect }: ImageSelectionViewProps) {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h2 className="modal-title">このサイトについて</h2>
             <p className="about-text">
-              これは完全無料で遊んでいただけるジグソーパズルゲームのWebサイトです。パズルが好きな母に向けて作成しました。どなたでも遊んでください。サイト維持のために広告を貼っています。
+              このサイトは完全無料で遊んでいただけます。サイト維持のために広告を掲載することがあります
             </p>
             <button className="cancel-button" onClick={() => setShowAboutModal(false)}>閉じる</button>
           </div>
