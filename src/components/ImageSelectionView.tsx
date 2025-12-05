@@ -58,6 +58,10 @@ function ImageSelectionView({ onImageSelect }: ImageSelectionViewProps) {
           src={image.url} 
           alt={image.name} 
           className="image-preview"
+          loading="lazy"
+          decoding="async"
+          width={280}
+          height={200}
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="280" height="200"%3E%3Crect width="280" height="200" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999"%3E画像を読み込めませんでした%3C/text%3E%3C/svg%3E';
@@ -85,6 +89,26 @@ function ImageSelectionView({ onImageSelect }: ImageSelectionViewProps) {
         {TODAY_IMAGES.map(renderImageCard)}
         {PUZZLE_IMAGES.map(renderImageCard)}
       </div>
+
+      <section className="section" aria-label="このサイトの遊び方">
+        <h2 className="section-title">遊び方</h2>
+        <div style={{ maxWidth: 900, margin: '0 auto', color: 'rgba(255,255,255,0.95)' }}>
+          <p>1. お好きな画像を選びます。2. ピース数（難易度）を選択するとプレイ画面が開きます。3. 手持ちのピースをドラッグしてプレイエリアの正しい位置へスナップさせましょう。完成したらお祝いが表示されます！</p>
+          <p>モバイル・PCのどちらでも快適に遊べるよう最適化しています。短時間の気分転換にも、集中してじっくり楽しみたい時にもどうぞ。</p>
+        </div>
+      </section>
+
+      <section className="section" aria-label="特徴とこだわり">
+        <h2 className="section-title">特徴</h2>
+        <div style={{ maxWidth: 900, margin: '0 auto', color: 'rgba(255,255,255,0.95)' }}>
+          <ul>
+            <li>シンプル操作でサクサク遊べる快適なプレイ体験</li>
+            <li>端末サイズに合わせた自動レイアウトで見やすい画面</li>
+            <li>「今日の画像」で毎日ちょっとしたワクワクを提供</li>
+          </ul>
+          <p>サイト維持のために将来的に広告を掲載する場合があります。詳しくは <a href="/privacy.html" style={{ color: '#fff', textDecoration: 'underline' }}>プライバシーポリシー</a> をご確認ください。</p>
+        </div>
+      </section>
 
       {showDifficultyModal && (
         <div className="modal-overlay" onClick={handleCloseModal}>

@@ -29,7 +29,7 @@ function App() {
   };
 
   return (
-    <div style={{ width: '100%', height: '100vh', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '100vh', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
       {currentView === 'selection' && (
         <ImageSelectionView onImageSelect={handleImageSelect} />
       )}
@@ -42,6 +42,12 @@ function App() {
           onBack={handleBackToSelection}
         />
       )}
+      <footer style={{ marginTop: 'auto', background: 'rgba(255,255,255,0.9)', padding: '10px 16px', fontSize: 12, display: 'flex', gap: 16, justifyContent: 'center' }}>
+        <a href="/privacy.html" style={{ color: '#334155', textDecoration: 'underline' }}>プライバシーポリシー</a>
+        <a href="/terms.html" style={{ color: '#334155', textDecoration: 'underline' }}>利用規約</a>
+        <a href="/contact.html" style={{ color: '#334155', textDecoration: 'underline' }}>お問い合わせ</a>
+        <a href="/faq.html" style={{ color: '#334155', textDecoration: 'underline' }}>FAQ</a>
+      </footer>
     </div>
   );
 }
