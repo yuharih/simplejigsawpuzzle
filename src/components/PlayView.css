@@ -108,7 +108,7 @@
   }
 
   .hand-pieces-container {
-    min-height: 100px;
+    min-height: 120px;
   }
 
   .confirm-content {
@@ -238,7 +238,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .puzzle-piece {

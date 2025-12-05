@@ -25,7 +25,7 @@ function PlayView({ image, difficulty, pieces, setPieces, onBack }: PlayViewProp
 
   const config = PUZZLE_CONFIGS[difficulty];
   const PLAY_ZONE_MAX = 600;
-  const HAND_ZONE_HEIGHT = 200;
+  const HAND_ZONE_HEIGHT = 220;
 
   useEffect(() => {
     const onResize = () => {
@@ -277,7 +277,7 @@ function PlayView({ image, difficulty, pieces, setPieces, onBack }: PlayViewProp
               const pieceHeight = PLAY_ZONE_SIZE / config.rows;
               const tabDepth = Math.min(pieceWidth, pieceHeight) * 0.2;
               const expandedWidth = pieceWidth + tabDepth * 2;
-              const scale = 0.6;
+              const scale = 0.75;
               const scaledWidth = expandedWidth * scale;
 
               return (
