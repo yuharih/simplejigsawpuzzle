@@ -22,7 +22,7 @@ export interface PuzzleImage {
   isTodayImage?: boolean;
 }
 
-export type PuzzleDifficulty = 'easy' | 'normal' | 'test';
+export type PuzzleDifficulty = 'easy' | 'normal' | 'hard';
 
 export interface PuzzleConfig {
   difficulty: PuzzleDifficulty;

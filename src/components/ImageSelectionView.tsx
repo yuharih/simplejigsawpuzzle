@@ -117,18 +117,6 @@ function ImageSelectionView({ onImageSelect }: ImageSelectionViewProps) {
             <div className="difficulty-options">
               <button
                 className="difficulty-button"
-                onClick={() => handleDifficultySelect('test')}
-              >
-                <div className="difficulty-name">テスト（2×2）</div>
-                <div className="difficulty-info">
-                  {PUZZLE_CONFIGS.test.totalPieces}ピース（約{PUZZLE_CONFIGS.test.estimatedTime}）
-                </div>
-                <div className="difficulty-desc">
-                  {PUZZLE_CONFIGS.test.rows} × {PUZZLE_CONFIGS.test.cols}
-                </div>
-              </button>
-              <button
-                className="difficulty-button"
                 onClick={() => handleDifficultySelect('easy')}
               >
                 <div className="difficulty-name">簡単</div>
@@ -149,6 +137,18 @@ function ImageSelectionView({ onImageSelect }: ImageSelectionViewProps) {
                 </div>
                 <div className="difficulty-desc">
                   {PUZZLE_CONFIGS.normal.rows} × {PUZZLE_CONFIGS.normal.cols}
+                </div>
+              </button>
+              <button
+                className="difficulty-button"
+                onClick={() => handleDifficultySelect('hard')}
+              >
+                <div className="difficulty-name">難しい</div>
+                <div className="difficulty-info">
+                  {PUZZLE_CONFIGS.hard.totalPieces}ピース（約{PUZZLE_CONFIGS.hard.estimatedTime}）
+                </div>
+                <div className="difficulty-desc">
+                  {PUZZLE_CONFIGS.hard.rows} × {PUZZLE_CONFIGS.hard.cols}
                 </div>
               </button>
             </div>

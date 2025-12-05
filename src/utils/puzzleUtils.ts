@@ -1,13 +1,6 @@
 import { PuzzlePiece, PuzzleConfig } from '../types';
 
 export const PUZZLE_CONFIGS: Record<string, PuzzleConfig> = {
-  test: {
-    difficulty: 'test',
-    rows: 2,
-    cols: 2,
-    totalPieces: 4,
-    estimatedTime: '1分',
-  },
   easy: {
     difficulty: 'easy',
     rows: 5,
@@ -21,6 +14,13 @@ export const PUZZLE_CONFIGS: Record<string, PuzzleConfig> = {
     cols: 7,
     totalPieces: 49,
     estimatedTime: '20分',
+  },
+  hard: {
+    difficulty: 'hard',
+    rows: 9,
+    cols: 9,
+    totalPieces: 81,
+    estimatedTime: '40分',
   },
 };
 
